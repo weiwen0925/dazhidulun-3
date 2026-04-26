@@ -317,12 +317,11 @@ img{max-width:100%;}
 }
 </style>
 
-<meta name="wy-full-protection" content="v2-lite">
+<meta name="wy-full-protection" content="v2-nb">
 <!-- WY-A: AI crawler block -->
 <meta name="robots" content="noai, noimageai, noarchive">
 <meta name="googlebot" content="noai, noimageai">
-<!-- WY-L4-preguard -->
-<style id="wy-preguard-css">html{visibility:hidden!important}</style>
+<!-- WY-L4-preguard: removed (non-blocking mode) -->
 <!-- WY-L3: print media block -->
 <style id="wy-l3-print">
 @media print {
@@ -1362,15 +1361,15 @@ hr{border:0;height:1px;margin:24px 0;
       },300);
     })();
     </script>
-<!-- WY-L2/L4/L6/B runtime protection -->
+<!-- WY-L2/L4/L6/B runtime protection (non-blocking) -->
 <script id="wy-runtime-protection">
 (function(){
   "use strict";
 
-  /* ── B: webdriver / headless 偵測 ── */
+  /* ── B: webdriver / headless 偵測（僅 console 警告） ── */
   if (navigator.webdriver === true ||
       /HeadlessChrome|PhantomJS|Selenium|puppeteer/i.test(navigator.userAgent)) {
-    return; /* 保持 preguard hidden，不解鎖 */
+    console.warn('[WY-B] automated browser detected');
   }
 
   /* ── L2: 覆寫 window.print，攔截 Ctrl+P / ⌘P ── */
@@ -1381,55 +1380,23 @@ hr{border:0;height:1px;margin:24px 0;
     }
   }, true);
 
-  /* ── L4: Origin Lock ── */
+  /* ── L4: Origin Lock（非阻塞，僅 console 記錄） ── */
   var ALLOWED_HOST = "weiwen0925.github.io";
   var ALLOWED_PATH = "/dazhidulun-3/";
-
-  function originOK() {
-    return location.hostname === ALLOWED_HOST &&
-           location.pathname.indexOf(ALLOWED_PATH) === 0;
+  window.__wyOriginOK = (location.hostname === ALLOWED_HOST &&
+                          location.pathname.indexOf(ALLOWED_PATH) === 0);
+  if (!window.__wyOriginOK) {
+    console.warn('[WY-L4] origin mismatch: expected ' + ALLOWED_HOST + ALLOWED_PATH);
   }
 
-  /* ── L6: 線上活性驗證 ── */
-  function freshCheck() {
-    return new Promise(function(resolve) {
-      var url = "https://" + ALLOWED_HOST + ALLOWED_PATH +
-                "?_wyping=" + Date.now() + "." + Math.random().toString(36).slice(2,8);
-      var ctrl = new AbortController();
-      var timer = setTimeout(function(){ ctrl.abort(); resolve(false); }, 6000);
-      fetch(url, {method:"HEAD", cache:"no-store", signal:ctrl.signal})
-        .then(function(r){ clearTimeout(timer); resolve(r.ok); })
-        .catch(function(){ clearTimeout(timer); resolve(false); });
-    });
+  /* ── L6: 線上活性驗證（非阻塞，僅 console 記錄） ── */
+  if (window.__wyOriginOK) {
+    var url = "https://" + ALLOWED_HOST + ALLOWED_PATH +
+              "?_wyping=" + Date.now() + "." + Math.random().toString(36).slice(2,8);
+    fetch(url, {method:"HEAD", cache:"no-store"})
+      .then(function(r){ if(!r.ok) console.warn('[WY-L6] freshness check failed'); })
+      .catch(function(){ console.warn('[WY-L6] freshness check error'); });
   }
-
-  /* ── 解鎖流程 ── */
-  function unlock() {
-    var el = document.getElementById('wy-preguard-css');
-    if (el) el.remove();
-    document.documentElement.style.visibility = '';
-    window.__wyOriginOK = true;
-    if (window.__wyReadyResolve) window.__wyReadyResolve();
-  }
-
-  window.__wyReady = new Promise(function(resolve) {
-    window.__wyReadyResolve = resolve;
-  });
-
-  /* 同步 origin check */
-  if (!originOK()) {
-    /* 不顯示警告頁，保持 hidden 即可 */
-    return;
-  }
-
-  /* 非同步 freshness check */
-  freshCheck().then(function(ok) {
-    if (ok) {
-      unlock();
-    }
-    /* 失敗也不顯示警告，保持 hidden */
-  });
-
 })();
 </script>
 </body></html>" data-ch="1"></iframe>
