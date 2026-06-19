@@ -109,6 +109,27 @@ body{
   border-color:var(--goldL);box-shadow:0 0 14px rgba(184,134,11,.55);}
 .sb-item.active{color:var(--goldL);}
 
+/* ─── 跨卷導覽(側欄尾端) ─── */
+.sb-external{width:100%;display:flex;flex-direction:column;align-items:center;
+  gap:6px;padding:14px 0 4px;margin-top:10px;
+  border-top:1px solid rgba(184,134,11,.25);}
+.sb-external::before{content:"跨 卷";display:block;
+  font-family:"Noto Sans TC",sans-serif;font-size:9.5px;letter-spacing:3px;
+  color:rgba(212,196,168,.5);margin-bottom:4px;text-align:center;}
+.sb-ext-item{display:flex;flex-direction:column;align-items:center;
+  text-decoration:none;color:var(--sbText);padding:3px 4px;width:100%;
+  transition:color .2s,transform .2s;}
+.sb-ext-item:hover{color:var(--goldL);transform:translateY(-1px);}
+.sb-ext-icon{display:flex;align-items:center;justify-content:center;
+  width:30px;height:30px;border-radius:50%;
+  background:rgba(212,196,168,.06);border:1px dashed rgba(212,196,168,.35);
+  font-family:"Noto Sans TC",sans-serif;font-weight:500;font-size:13px;
+  color:var(--sbText);transition:all .25s;margin-bottom:3px;}
+.sb-ext-item:hover .sb-ext-icon{background:rgba(184,134,11,.22);
+  border-color:var(--goldL);border-style:solid;color:var(--goldL);}
+.sb-ext-label{font-size:10px;letter-spacing:1.5px;
+  font-family:"Noto Sans TC",sans-serif;text-align:center;line-height:1.25;}
+
 /* ─── Hamburger (mobile) ─── */
 #sbToggle{position:fixed;top:14px;left:14px;z-index:200;
   display:none;width:42px;height:42px;border-radius:8px;
@@ -161,18 +182,30 @@ body{
   letter-spacing:2px;margin-bottom:40px;font-family:"Noto Sans TC",sans-serif;}
 .toc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
   gap:18px;}
-.toc-card{display:flex;align-items:center;gap:14px;padding:18px 22px;
+.toc-card{position:relative;
   background:var(--card);border:1px solid var(--border);border-radius:10px;
-  text-decoration:none;color:var(--text);transition:all .25s;
-  box-shadow:0 1px 4px rgba(91,58,41,.05);cursor:pointer;}
+  transition:all .25s;
+  box-shadow:0 1px 4px rgba(91,58,41,.05);}
 .toc-card:hover{transform:translateX(4px);box-shadow:0 4px 12px rgba(91,58,41,.12);
   border-color:var(--gold);}
+.toc-main{display:flex;align-items:center;gap:14px;padding:18px 48px 18px 22px;
+  text-decoration:none;color:var(--text);cursor:pointer;border-radius:10px;}
 .toc-num{flex:0 0 auto;display:flex;align-items:center;justify-content:center;
   width:42px;height:42px;border-radius:50%;
   background:linear-gradient(135deg,var(--gold),var(--goldL));
   color:#fff;font-weight:600;font-size:17px;
   font-family:"Noto Sans TC",sans-serif;letter-spacing:0;}
 .toc-name{flex:1;font-size:19.5px;line-height:1.7;color:var(--text);font-weight:500;}
+/* 右下角 YouTube 圖示 */
+.toc-yt{position:absolute;right:10px;bottom:8px;
+  display:inline-flex;align-items:center;justify-content:center;
+  width:28px;height:20px;border-radius:5px;
+  background:#cc0000;color:#fff;text-decoration:none;
+  transition:transform .18s, background .18s, box-shadow .18s;
+  box-shadow:0 1px 3px rgba(0,0,0,.18);opacity:.92;}
+.toc-yt:hover{background:#ff0000;transform:scale(1.12);
+  box-shadow:0 2px 6px rgba(204,0,0,.45);opacity:1;}
+.toc-yt svg{display:block;}
 
 /* ─── 章節 ─── */
 section.chapter{margin:48px 0;}
@@ -436,6 +469,11 @@ body{font-size:20px!important;}
 <a class="sb-item" data-ch="16" href="#chapter-16"><span class="sb-circle">十六</span><span class="sb-label" data-wytext="nuCJjfnFgfLH"></span></a>
 <a class="sb-item" data-ch="17" href="#chapter-17"><span class="sb-circle">十七</span><span class="sb-label" data-wytext="kuK2g/3E"></span></a>
 </nav>
+<div class="sb-external">
+<a class="sb-ext-item" href="https://weiwen0925.github.io/dazhidulun-0/" rel="noopener" target="_blank" title="門 頁"><span class="sb-ext-icon">🏛</span><span class="sb-ext-label" data-wytext="nu+tRIja6Q=="></span></a>
+<a class="sb-ext-item" href="https://weiwen0925.github.io/dazhidulun-2/" rel="noopener" target="_blank" title="卷 二"><span class="sb-ext-icon">←</span><span class="sb-ext-label" data-wytext="kvSaRIXA5A=="></span></a>
+<a class="sb-ext-item" href="https://weiwen0925.github.io/dazhidulun-4/" rel="noopener" target="_blank" title="卷 四"><span class="sb-ext-icon">→</span><span class="sb-ext-label" data-wytext="kvSaRITh8w=="></span></a>
+</div>
 </aside>
 <div class="main">
 <div class="site-hero">
@@ -470,23 +508,23 @@ body{font-size:20px!important;}
 <h2 class="toc-title" data-wytext="kMGQRIbhxkmN+eg="></h2>
 <div class="toc-desc" data-wytext="kvSagNnzSKvTVYXy5ci7sJOi9lnv00Gf7diB+O2R1q7WvvcRtc4NjPjvjuDkkN3RTu+EDZOy0J6x2oTLzEmmwkyc9pLUk/PXy9vI2tad89GBxMg="></div>
 <div class="toc-grid">
-<a class="toc-card" href="#chapter-1"><span class="toc-num" data-wytext="k8Gt"></span><span class="toc-name" data-wytext="kNWBgNn6jfrlVa7CTsS0ppO56py+5YXCxY3Z+ov75cW7oJOu+Z6ByIXA/A=="></span></a>
-<a class="toc-card" href="#chapter-2"><span class="toc-num" data-wytext="k8Oh"></span><span class="toc-name" data-wytext="kNWBgNv2jfrlVa7CTsmOop6o4p6C40G430mM9eqc+aDWme3UxsjJ3Mw="></span></a>
-<a class="toc-card" href="#chapter-3"><span class="toc-num" data-wytext="k8Gk"></span><span class="toc-name" data-wytext="kNWBgNnzjfrlVa7CTsi2nJCg3pGF0ofV/I3c7Yn2yQ=="></span></a>
-<a class="toc-card" href="#chapter-4"><span class="toc-num" data-wytext="kuK2"></span><span class="toc-name" data-wytext="kNWBgfrhjfrlVa7CTsiXipCkz52X8IT364zs8w=="></span></a>
-<a class="toc-card" href="#chapter-5"><span class="toc-num" data-wytext="k8O5"></span><span class="toc-name" data-wytext="kNWBgNvujfrlVa7CTsSrkpGP8p+Rxobg7I3c/IXy48Sxop6N2A=="></span></a>
-<a class="toc-card" href="#chapter-6"><span class="toc-num" data-wytext="kvyA"></span><span class="toc-name" data-wytext="kNWBgeTXjfrlVa7CTsWYlZCN+Jya1obhyQ=="></span></a>
-<a class="toc-card" href="#chapter-7"><span class="toc-num" data-wytext="k8Gu"></span><span class="toc-name" data-wytext="kNWBgNn5jfrlVa7CTsq3jJOP3p6ozYf52Q=="></span></a>
-<a class="toc-card" href="#chapter-8"><span class="toc-num" data-wytext="kvyG"></span><span class="toc-name" data-wytext="kNWBgeTRjfrlVa7CTsWYu5+pyJ6T4YfGyo3d/o/14siWkJ6W1JGpz4L65Q=="></span></a>
-<a class="toc-card" href="#chapter-9"><span class="toc-num" data-wytext="k8Cw"></span><span class="toc-name" data-wytext="kNWBgNjnjfrlVa7CTsiMrp6byJ+y8InB9w=="></span></a>
-<a class="toc-card" href="#chapter-10"><span class="toc-num" data-wytext="kvSs"></span><span class="toc-name" data-wytext="kNWBgez7jfrlVa7CTsuihJ6ZwZCvx4XG1Q=="></span></a>
-<a class="toc-card" href="#chapter-11"><span class="toc-num" data-wytext="kvSsgNn6"></span><span class="toc-name" data-wytext="kNWBgez7jNHkkP/0Tu+EDZC4952Q+ITN2oHa0w=="></span></a>
-<a class="toc-card" href="#chapter-12"><span class="toc-num" data-wytext="kvSsgNv2"></span><span class="toc-name" data-wytext="kNWBgez7jNPokP/0Tu+EDZCS85++8In51Y/34Q=="></span></a>
-<a class="toc-card" href="#chapter-13"><span class="toc-num" data-wytext="kvSsgNnz"></span><span class="toc-name" data-wytext="kNWBgez7jNHtkP/0Tu+EDZ+x2ZyT84TN2Yzs3A=="></span></a>
-<a class="toc-card" href="#chapter-14"><span class="toc-num" data-wytext="kvSsgfrh"></span><span class="toc-name" data-wytext="kNWBgez7jfL/kP/0Tu+EDZCt/p6Y9IbhyQ=="></span></a>
-<a class="toc-card" href="#chapter-15"><span class="toc-num" data-wytext="kvSsgNvu"></span><span class="toc-name" data-wytext="kNWBgez7jNPwkP/0Tu+EDZ6w4Z6x2ojgwI3Z7g=="></span></a>
-<a class="toc-card" href="#chapter-16"><span class="toc-num" data-wytext="kvSsgeTX"></span><span class="toc-name" data-wytext="kNWBgez7jezJkP/0Tu+EDZOl2JC0wIji14D/1g=="></span></a>
-<a class="toc-card" href="#chapter-17"><span class="toc-num" data-wytext="kvSsgNn5"></span><span class="toc-name" data-wytext="kNWBgez7jNHnkP/0Tu+EDZ+2/Jy2/4bm1o7a3A=="></span></a>
+<div class="toc-card"><a class="toc-main" href="#chapter-1"><span class="toc-num" data-wytext="k8Gt"></span><span class="toc-name" data-wytext="kNWBgNn6jfrlVa7CTsS0ppO56py+5YXCxY3Z+ov75cW7oJOu+Z6ByIXA/A=="></span></a><a aria-label="第一品 YouTube 說明" class="toc-yt" href="https://youtu.be/O1DRALp05i4" rel="noopener" target="_blank" title="第一品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
+<div class="toc-card"><a class="toc-main" href="#chapter-2"><span class="toc-num" data-wytext="k8Oh"></span><span class="toc-name" data-wytext="kNWBgNv2jfrlVa7CTsmOop6o4p6C40G430mM9eqc+aDWme3UxsjJ3Mw="></span></a><a aria-label="第二品 YouTube 說明" class="toc-yt" href="https://youtu.be/lsg9-wMGIsY" rel="noopener" target="_blank" title="第二品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
+<div class="toc-card"><a class="toc-main" href="#chapter-3"><span class="toc-num" data-wytext="k8Gk"></span><span class="toc-name" data-wytext="kNWBgNnzjfrlVa7CTsi2nJCg3pGF0ofV/I3c7Yn2yQ=="></span></a><a aria-label="第三品 YouTube 說明" class="toc-yt" href="https://youtu.be/16YJKzAIajw" rel="noopener" target="_blank" title="第三品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
+<div class="toc-card"><a class="toc-main" href="#chapter-4"><span class="toc-num" data-wytext="kuK2"></span><span class="toc-name" data-wytext="kNWBgfrhjfrlVa7CTsiXipCkz52X8IT364zs8w=="></span></a><a aria-label="第四品 YouTube 說明" class="toc-yt" href="https://youtu.be/mFZ8hSVZX2o" rel="noopener" target="_blank" title="第四品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
+<div class="toc-card"><a class="toc-main" href="#chapter-5"><span class="toc-num" data-wytext="k8O5"></span><span class="toc-name" data-wytext="kNWBgNvujfrlVa7CTsSrkpGP8p+Rxobg7I3c/IXy48Sxop6N2A=="></span></a><a aria-label="第五品 YouTube 說明" class="toc-yt" href="https://youtu.be/Ju21jJSLYc8" rel="noopener" target="_blank" title="第五品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
+<div class="toc-card"><a class="toc-main" href="#chapter-6"><span class="toc-num" data-wytext="kvyA"></span><span class="toc-name" data-wytext="kNWBgeTXjfrlVa7CTsWYlZCN+Jya1obhyQ=="></span></a><a aria-label="第六品 YouTube 說明" class="toc-yt" href="https://youtu.be/Y23E_PZ4Pog" rel="noopener" target="_blank" title="第六品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
+<div class="toc-card"><a class="toc-main" href="#chapter-7"><span class="toc-num" data-wytext="k8Gu"></span><span class="toc-name" data-wytext="kNWBgNn5jfrlVa7CTsq3jJOP3p6ozYf52Q=="></span></a><a aria-label="第七品 YouTube 說明" class="toc-yt" href="https://youtu.be/bQkSnW7K-mU" rel="noopener" target="_blank" title="第七品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
+<div class="toc-card"><a class="toc-main" href="#chapter-8"><span class="toc-num" data-wytext="kvyG"></span><span class="toc-name" data-wytext="kNWBgeTRjfrlVa7CTsWYu5+pyJ6T4YfGyo3d/o/14siWkJ6W1JGpz4L65Q=="></span></a><a aria-label="第八品 YouTube 說明" class="toc-yt" href="https://youtu.be/4SzrtTgkePI" rel="noopener" target="_blank" title="第八品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
+<div class="toc-card"><a class="toc-main" href="#chapter-9"><span class="toc-num" data-wytext="k8Cw"></span><span class="toc-name" data-wytext="kNWBgNjnjfrlVa7CTsiMrp6byJ+y8InB9w=="></span></a><a aria-label="第九品 YouTube 說明" class="toc-yt" href="https://youtu.be/F8vAxM48xos" rel="noopener" target="_blank" title="第九品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
+<div class="toc-card"><a class="toc-main" href="#chapter-10"><span class="toc-num" data-wytext="kvSs"></span><span class="toc-name" data-wytext="kNWBgez7jfrlVa7CTsuihJ6ZwZCvx4XG1Q=="></span></a><a aria-label="第十品 YouTube 說明" class="toc-yt" href="https://youtu.be/2llDzBIrjto" rel="noopener" target="_blank" title="第十品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
+<div class="toc-card"><a class="toc-main" href="#chapter-11"><span class="toc-num" data-wytext="kvSsgNn6"></span><span class="toc-name" data-wytext="kNWBgez7jNHkkP/0Tu+EDZC4952Q+ITN2oHa0w=="></span></a><a aria-label="第十一品 YouTube 說明" class="toc-yt" href="https://youtu.be/WTuKwduGCho" rel="noopener" target="_blank" title="第十一品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
+<div class="toc-card"><a class="toc-main" href="#chapter-12"><span class="toc-num" data-wytext="kvSsgNv2"></span><span class="toc-name" data-wytext="kNWBgez7jNPokP/0Tu+EDZCS85++8In51Y/34Q=="></span></a><a aria-label="第十二品 YouTube 說明" class="toc-yt" href="https://youtu.be/sIUhXouPVS0" rel="noopener" target="_blank" title="第十二品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
+<div class="toc-card"><a class="toc-main" href="#chapter-13"><span class="toc-num" data-wytext="kvSsgNnz"></span><span class="toc-name" data-wytext="kNWBgez7jNHtkP/0Tu+EDZ+x2ZyT84TN2Yzs3A=="></span></a><a aria-label="第十三品 YouTube 說明" class="toc-yt" href="https://youtu.be/ePkQcka-lE0" rel="noopener" target="_blank" title="第十三品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
+<div class="toc-card"><a class="toc-main" href="#chapter-14"><span class="toc-num" data-wytext="kvSsgfrh"></span><span class="toc-name" data-wytext="kNWBgez7jfL/kP/0Tu+EDZCt/p6Y9IbhyQ=="></span></a><a aria-label="第十四品 YouTube 說明" class="toc-yt" href="https://youtu.be/VMGojWvt2VY" rel="noopener" target="_blank" title="第十四品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
+<div class="toc-card"><a class="toc-main" href="#chapter-15"><span class="toc-num" data-wytext="kvSsgNvu"></span><span class="toc-name" data-wytext="kNWBgez7jNPwkP/0Tu+EDZ6w4Z6x2ojgwI3Z7g=="></span></a><a aria-label="第十五品 YouTube 說明" class="toc-yt" href="https://youtu.be/EooTQwE-YBA" rel="noopener" target="_blank" title="第十五品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
+<div class="toc-card"><a class="toc-main" href="#chapter-16"><span class="toc-num" data-wytext="kvSsgeTX"></span><span class="toc-name" data-wytext="kNWBgez7jezJkP/0Tu+EDZOl2JC0wIji14D/1g=="></span></a><a aria-label="第十六品 YouTube 說明" class="toc-yt" href="https://youtu.be/-SjCKjViToU" rel="noopener" target="_blank" title="第十六品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
+<div class="toc-card"><a class="toc-main" href="#chapter-17"><span class="toc-num" data-wytext="kvSsgNn5"></span><span class="toc-name" data-wytext="kNWBgez7jNHnkP/0Tu+EDZ+2/Jy2/4bm1o7a3A=="></span></a><a aria-label="第十七品 YouTube 說明" class="toc-yt" href="https://youtu.be/7t_Ap4JmAoY" rel="noopener" target="_blank" title="第十七品 YouTube 影片說明"><svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M23.5 6.2c-.3-1-1.1-1.8-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6c-1 .3-1.8 1.1-2.1 2.1C0 8 0 12 0 12s0 4 .5 5.8c.3 1 1.1 1.8 2.1 2.1 1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6c1-.3 1.8-1.1 2.1-2.1.5-1.8.5-5.8.5-5.8s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"></path></svg></a></div>
 </div>
 </section>
 <section class="chapter" id="chapter-1">
