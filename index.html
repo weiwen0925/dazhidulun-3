@@ -1236,63 +1236,6 @@ setTimeout(handleSectionHash,3500);
 
 
 
-<!--WY-C3P10:BEGIN-->
-<style id="wy-c3p10-css">
-.c3p10-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
-.c3p10-fabbox.show{display:block;}
-.c3p10-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
-.c3p10-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
-.c3p10-ic{font-size:15px;line-height:1;color:#ecc978;}
-.c3p10-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
-.c3p10-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
-.c3p10-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
-.c3p10-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
-.c3p10-modal.open{display:flex;}
-.c3p10-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
-.c3p10-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
-.c3p10-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
-.c3p10-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
-.c3p10-close:hover{background:#e3d5b8;}
-.c3p10-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
-.c3p10-tbl th,.c3p10-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
-.c3p10-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
-.c3p10-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
-.c3p10-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
-.c3p10-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
-@media(max-width:900px){.c3p10-fabbox{right:14px;}.c3p10-tbl{font-size:11.5px;}.c3p10-card{padding:26px 14px 16px;}}
-</style>
-<div class="c3p10-fabbox" id="c3p10Box"><button class="c3p10-btn" id="c3p10Btn" type="button" aria-label="開啟全景總表"><span class="c3p10-ic">&#9638;</span><span class="c3p10-ls"><span class="c3p10-l1">本品 &middot; 摩訶那伽</span><span class="c3p10-l2">象喻自利不動・龍喻利他潤生・力悲無畏</span></span></button></div><div class="c3p10-modal" id="c3p10Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c3p10-card"><button class="c3p10-close" id="c3p10Close" type="button" aria-label="關閉">&times;</button><h3>卷三·第十品 摩訶那伽 · 全景總表</h3><p class="sub">卷三・第10品｜全四章｜象喻自利・龍喻利他・三大力悲無畏</p><table class="c3p10-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>第一章</td><td>釋名義</td><td>「摩訶」言大「那」名不「伽」名罪，諸阿羅漢諸煩惱斷故名不罪；「那伽」或名龍或名象，水行龍力大陸行象力大雙軌譬喻</td><td>摩訶那伽、大不罪、龍象雙重隱喻</td></tr><tr><td>第二章</td><td>象喻七節・自利之全幅</td><td>如善調象王能破大軍直入不迴不畏刀杖不難水火不走不退死至不避，修禪定智慧故能破魔軍及諸結使賊，罵詈撾打不悔不恚</td><td>善調象王、破魔軍結使賊、不動三昧</td></tr><tr><td>第三章</td><td>龍喻五節・利他之全幅</td><td>如大龍王從大海出起大雲遍覆虛空放大電光澍大洪雨潤澤萬物，阿羅漢從禪定智慧大海出起慈悲雲現光明說實法雨弟子心令生善牙</td><td>從大海出、起慈悲雲、雨弟子心令生善牙</td></tr><tr><td>第四章</td><td>合論・破生雙重結構</td><td>象破（自利）與龍生（利他）同源於禪定加智慧，大力大悲大無畏三大圓融鼎立而為一身，總結諸阿羅漢諸煩惱斷</td><td>破生雙重結構、大力大悲大無畏</td></tr></tbody></table><p class="c3p10-note">總表依本品原典通讀整理，供快速掛握章節脈絡與核心命題；欲穷其義，仍請詳讀本品全文。</p></div></div>
-<script id="wy-c3p10-js">(function(){
-var CH=document.querySelectorAll("section.chapter");
-var BTN=document.getElementById("c3p10Btn"),BOX=document.getElementById("c3p10Box"),MODAL=document.getElementById("c3p10Modal");
-if(!CH.length||!BTN||!BOX||!MODAL)return;
-var TARGET=9;
-function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
-var FSEL="#floatYt,.float-yt,#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn";
-function fab(){
-  var els=document.querySelectorAll(FSEL);
-  for(var i=0;i<els.length;i++){
-    var e=els[i],r=e.getBoundingClientRect(),st=getComputedStyle(e);
-    if(r.height>0&&st.display!=="none"&&st.visibility!=="hidden")return e;
-  }
-  return null;
-}
-function place(){
-  var base=null,eb=document.querySelector(".wy-ebox");
-  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
-  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect();base=Math.round(window.innerHeight-fr.top)+10;}}
-  if(base===null)base=78;
-  BOX.style.bottom=base+"px";
-}
-function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
-var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
-window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
-BTN.addEventListener("click",function(){MODAL.classList.add("open");});
-MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c3p10Close")MODAL.classList.remove("open");});
-document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
-upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
-})();</script>
-<!--WY-C3P10:END-->
 
 <!--WY-C3P11:BEGIN-->
 <style id="wy-c3p11-css">
@@ -2220,5 +2163,58 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-C3P9:END-->
+<!--WY-C3P10:BEGIN-->
+<style id="wy-c3p10-css">
+.c3p10-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c3p10-fabbox.show{display:block;}
+.c3p10-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c3p10-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c3p10-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c3p10-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c3p10-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c3p10-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c3p10-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c3p10-modal.open{display:flex;}
+.c3p10-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c3p10-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c3p10-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c3p10-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c3p10-close:hover{background:#e3d5b8;}
+.c3p10-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c3p10-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#8b5e3c;font-size:14.5px;text-align:left;margin:.6em 0 .35em;line-height:1.5;}
+.c3p10-tbl th,.c3p10-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c3p10-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c3p10-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c3p10-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c3p10-tbl b{color:#8b2500;}
+.c3p10-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+.c3p10-note b{color:#8b2500;}
+@media(max-width:900px){.c3p10-fabbox{right:14px;}.c3p10-tbl{font-size:11.5px;}.c3p10-card{padding:26px 14px 16px;}}
+</style>
+<div class="c3p10-fabbox" id="c3p10Box"><button class="c3p10-btn" id="c3p10Btn" type="button" aria-label="開啟全景總表"><span class="c3p10-ic">▦</span><span class="c3p10-ls"><span class="c3p10-l1">本品 · 摩訶那伽</span><span class="c3p10-l2">大不罪 · 象龍雙喻自利利他</span></span></button></div><div class="c3p10-modal" id="c3p10Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c3p10-card"><button class="c3p10-close" id="c3p10Close" type="button" aria-label="關閉">×</button><h3>卷三·第十品 摩訶那伽 · 全景總表</h3><p class="sub">卷三・第十品｜大不罪語源・善調象王破魔軍・大龍王起慈悲雲・大力大悲大無畏</p><table class="c3p10-tbl"><caption>一、名義之詮與雙軌譬喻（本品主骨架）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>語源訓詁</td><td>摩訶（大）加那（不）加伽（罪，āga之略）等於大不罪；諸阿羅漢諸煩惱斷，故名不罪</td></tr><tr><td>三段論</td><td>定義（那名不伽名罪）→教義對應（諸阿羅漢諸煩惱斷）→結論（以是故名不罪）</td></tr><tr><td>那伽雙義</td><td>那伽或名龍或名象——水行中龍力大，陸行中象力大；五千阿羅漢是諸無數阿羅漢中最大力者</td></tr><tr><td>水陸對舉</td><td>陸行之象——堅實不動之自利靜相；水行之龍——潤澤轉化之利他動相；動靜兩極皆達其極</td></tr><tr><td>同源根本</td><td>象之不動與龍之潤生皆同源於「修禪定、智慧故」——定慧二輪之力，非肉體神通之力</td></tr></tbody></table><table class="c3p10-tbl"><caption>二、象喻・自利與破惡七節</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>破大軍直入不迴</td><td>如善調象王能破大軍、直入不迴、不畏刀杖不難水火——阿羅漢修禪定智慧故能破魔軍及諸結使賊</td></tr><tr><td>忍辱不悔不恚</td><td>罵詈撾打不悔不恚——已斷我見我所見，故無被辱之我可為瞋恚所緣</td></tr><tr><td>超越生存本能</td><td>老死水火不畏不難——徹底解除五蘊我執所推動的一切自保反應，非僅對抗精神壓力</td></tr><tr><td>不動三層</td><td>內修（禪定智慧為根本）加外用（破除結使為顯相）加境界（無我無畏為歸宿）</td></tr><tr><td>大力之體</td><td>修禪定智慧故能破魔軍及諸結使賊——此力非肉體外神通之力，乃定慧二輪之力</td></tr></tbody></table><table class="c3p10-tbl"><caption>三、龍喻・利他與潤生五節（中觀收束）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>從大海出</td><td>龍居海中如阿羅漢沉浸禪定智慧，「出」字顯示由自利轉利他的悲心發動</td></tr><tr><td>起慈悲雲</td><td>智慧之水（內證）轉化為慈悲之雲（外發），遍覆虛空、潤及可度，無緣大慈同體大悲</td></tr><tr><td>現大光明</td><td>說法前先以神通光明種種變化示現，非炫耀，乃破眾生疑、引眾生信，令法雨易於入心</td></tr><tr><td>澍大洪雨</td><td>說實法相——應時而降應根而說，如實宣演阿羅漢層次所證之四聖諦十二因緣三十七道品</td></tr><tr><td>雨弟子心</td><td>法雨歸於弟子心地，宿世善種待雨而萌，是名「令生善牙」——潤之妙用</td></tr></tbody></table><p class="c3p10-note">「摩訶那伽」一名於語源層是「大不罪」的梵漢音義對譯，於象徵層卻翻出「龍象雙身」的深意——水行中龍力大、陸行中象力大，二者同源於禪定與智慧。象喻七節鋪陳阿羅漢向內的破與不動：破魔軍及諸結使賊、忍受罵詈撾打而不悔不恚、老死水火不畏不難，皆是定慧之力的內證顯相；龍喻五節則鋪陳向外的生與潤：從禪定智慧大海出、起慈悲雲遍覆虛空、現光明說實法相、雨弟子心令生善牙。破（自利）與生（利他）首尾相銜、缺一不可，總攝為大力（體）、大悲（用）、大無畏（相）三大圓融——是為「諸無數阿羅漢中最大力」之摩訶那伽全貌。</p></div></div>
+<script id="wy-c3p10-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c3p10Btn"),BOX=document.getElementById("c3p10Box"),MODAL=document.getElementById("c3p10Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=9;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#vidFab,.vid-fab,#videoFab,#wyVideoBtn,#wyFab,#wy-fab,#vid-floating,#floatingYt,.video-fab,.wy-vbtn,.wy-video-fab,.floating-yt",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c3p10Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C3P10:END-->
 </body>
 </html>
