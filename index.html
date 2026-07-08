@@ -1232,63 +1232,6 @@ setTimeout(handleSectionHash,3500);
 
 
 
-<!--WY-C3P6:BEGIN-->
-<style id="wy-c3p6-css">
-.c3p6-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
-.c3p6-fabbox.show{display:block;}
-.c3p6-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
-.c3p6-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
-.c3p6-ic{font-size:15px;line-height:1;color:#ecc978;}
-.c3p6-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
-.c3p6-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
-.c3p6-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
-.c3p6-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
-.c3p6-modal.open{display:flex;}
-.c3p6-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
-.c3p6-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
-.c3p6-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
-.c3p6-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
-.c3p6-close:hover{background:#e3d5b8;}
-.c3p6-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
-.c3p6-tbl th,.c3p6-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
-.c3p6-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
-.c3p6-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
-.c3p6-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
-.c3p6-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
-@media(max-width:900px){.c3p6-fabbox{right:14px;}.c3p6-tbl{font-size:11.5px;}.c3p6-card{padding:26px 14px 16px;}}
-</style>
-<div class="c3p6-fabbox" id="c3p6Box"><button class="c3p6-btn" id="c3p6Btn" type="button" aria-label="開啟全景總表"><span class="c3p6-ic">&#9638;</span><span class="c3p6-ls"><span class="c3p6-l1">本品 &middot; 諸漏已盡</span><span class="c3p6-l2">三界三漏窮盡・伏斷之別・焦芽敗種無餘</span></span></button></div><div class="c3p6-modal" id="c3p6Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c3p6-card"><button class="c3p6-close" id="c3p6Close" type="button" aria-label="關閉">&times;</button><h3>卷三·第六品 諸漏已盡 · 全景總表</h3><p class="sub">卷三・第6品｜全六章｜三界三漏・伏斷之別・無餘存在學</p><table class="c3p6-tbl"><thead><tr><th>章</th><th>主題</th><th>核心命題</th><th>關鍵名相</th></tr></thead><tbody><tr><td>第一章</td><td>經論原文與「漏」的本體論</td><td>三界中三種漏已盡無餘故言漏盡也，漏（Āsrava）非物理破洞而是心識向外攀緣的慣性，含流注留住破漏三動態</td><td>諸全稱量詞、漏流注留住破漏</td></tr><tr><td>第二章</td><td>滲漏的容器・三界結構</td><td>欲界色界無色界粗中細三層存在維度，即便非想非非想天仍有我在體驗空之細微執取，執著細化不等於消失</td><td>三界總綱、無色界我在極細執取</td></tr><tr><td>第三章</td><td>三種漏的精細分判</td><td>欲漏向下引力（僅限欲界）、有漏向上執取（色無色界對永恆的渴望）、無明漏根本迷誤（遍三界），2×3矩陣窮舉</td><td>欲漏有漏無明漏、漏界交織矩陣</td></tr><tr><td>第四章</td><td>「已盡」的方法論</td><td>伏是大石壓草根尚在、斷是斬樹根永不復生，中觀以空性堵漏、離四句絕百非解構漏之實體化，般若為唯一封漏劑</td><td>伏除斷除、空性論證三步、般若波羅蜜</td></tr><tr><td>第五章</td><td>「無餘」與「漏盡身」的存在學</td><td>焦芽敗種喻無餘之不可逆完成，有漏身隨業流轉vs無漏身得大自在，作用仍在黏著已無如荷葉上的水滴</td><td>焦芽敗種、有漏身無漏身、荷葉水滴</td></tr><tr><td>第六章</td><td>漏盡者的境界與全品迴向</td><td>寂靜清涼三時皆不生漏，「故言漏盡也」回扣經文完成十四字閉環，如鳥飛空足跡何在如魚過沙形何存</td><td>寂靜清涼、故言漏盡也、如鳥飛空</td></tr></tbody></table><p class="c3p6-note">總表依本品原典通讀整理，供快速掛握章節脈絡與核心命題；欲穷其義，仍請詳讀本品全文。</p></div></div>
-<script id="wy-c3p6-js">(function(){
-var CH=document.querySelectorAll("section.chapter");
-var BTN=document.getElementById("c3p6Btn"),BOX=document.getElementById("c3p6Box"),MODAL=document.getElementById("c3p6Modal");
-if(!CH.length||!BTN||!BOX||!MODAL)return;
-var TARGET=5;
-function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
-var FSEL="#floatYt,.float-yt,#wyFloatYt,.wy-video-fab,.floating-yt,#wyVideoBtn,#vid-floating,#floatingYt,#vidFab,.vid-fab,#videoFab,#wyFab,#wy-fab,.wy-vbtn";
-function fab(){
-  var els=document.querySelectorAll(FSEL);
-  for(var i=0;i<els.length;i++){
-    var e=els[i],r=e.getBoundingClientRect(),st=getComputedStyle(e);
-    if(r.height>0&&st.display!=="none"&&st.visibility!=="hidden")return e;
-  }
-  return null;
-}
-function place(){
-  var base=null,eb=document.querySelector(".wy-ebox");
-  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
-  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect();base=Math.round(window.innerHeight-fr.top)+10;}}
-  if(base===null)base=78;
-  BOX.style.bottom=base+"px";
-}
-function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
-var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
-window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
-BTN.addEventListener("click",function(){MODAL.classList.add("open");});
-MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c3p6Close")MODAL.classList.remove("open");});
-document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
-upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
-})();</script>
-<!--WY-C3P6:END-->
 
 <!--WY-C3P7:BEGIN-->
 <style id="wy-c3p7-css">
@@ -2236,5 +2179,58 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-C3P5:END-->
+<!--WY-C3P6:BEGIN-->
+<style id="wy-c3p6-css">
+.c3p6-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c3p6-fabbox.show{display:block;}
+.c3p6-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c3p6-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c3p6-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c3p6-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c3p6-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c3p6-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c3p6-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c3p6-modal.open{display:flex;}
+.c3p6-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c3p6-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c3p6-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c3p6-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c3p6-close:hover{background:#e3d5b8;}
+.c3p6-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c3p6-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#8b5e3c;font-size:14.5px;text-align:left;margin:.6em 0 .35em;line-height:1.5;}
+.c3p6-tbl th,.c3p6-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c3p6-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c3p6-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c3p6-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c3p6-tbl b{color:#8b2500;}
+.c3p6-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+.c3p6-note b{color:#8b2500;}
+@media(max-width:900px){.c3p6-fabbox{right:14px;}.c3p6-tbl{font-size:11.5px;}.c3p6-card{padding:26px 14px 16px;}}
+</style>
+<div class="c3p6-fabbox" id="c3p6Box"><button class="c3p6-btn" id="c3p6Btn" type="button" aria-label="開啟全景總表"><span class="c3p6-ic">▦</span><span class="c3p6-ls"><span class="c3p6-l1">本品 · 諸漏已盡</span><span class="c3p6-l2">三界三漏的解脫存有論</span></span></button></div><div class="c3p6-modal" id="c3p6Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c3p6-card"><button class="c3p6-close" id="c3p6Close" type="button" aria-label="關閉">×</button><h3>卷三·第六品 諸漏已盡 · 全景總表</h3><p class="sub">卷三・第六品｜諸為全稱量詞・三界容器・欲有無明三漏・空性拔根・寂靜清涼</p><table class="c3p6-tbl"><caption>一、「諸漏已盡」四層邏輯結構（本品主骨架）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>諸（全稱量詞）</td><td>涵蓋一切類、一切時、一切處之漏；解脫判準是全無而非少有，無99%與100%之差別</td></tr><tr><td>漏（本體論概念）</td><td>梵語āsrava，非物理破洞，而是心識向外攀緣的慣性——流注、留住、破漏三動態</td></tr><tr><td>三界（場所窮舉）</td><td>欲界（物質與感官強烈運作）、色界（定境微細色法）、無色界（純粹精神・我在的極細執取）</td></tr><tr><td>三種漏（類型窮舉）</td><td>欲漏（向下引力）、有漏（向上執取）、無明漏（貫穿三界的根本迷誤，前二漏之基底）</td></tr><tr><td>無餘（斷盡度）</td><td>拔根之後連種子亦被燒焦，是不可逆的完成，非僅是禪定壓制的暫時止息</td></tr></tbody></table><table class="c3p6-tbl"><caption>二、三界診斷與三漏交織矩陣</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>欲界之漏</td><td>根境識三合生觸，觸後生受、愛、取——五欲能量消耗，最粗顯易察</td></tr><tr><td>色界之漏</td><td>已離粗重五欲，卻執著禪悅與定境「味著」——攀緣主體未消，只是對象變細</td></tr><tr><td>無色界之漏</td><td>連身體物質對象皆消融，仍執著「我在體驗空」——體驗者尚未消融，即非究竟</td></tr><tr><td>矩陣結論</td><td>離欲界僅能斷欲漏，必進一步斷有漏與無明漏，方能真出離三界——非想非非想天仍在漏中</td></tr><tr><td>三漏鼎立</td><td>欲漏（僅限欲界）、有漏（色無色界）、無明漏（遍三界，是前二漏土壤）——無明若無，前二漏無從生起</td></tr></tbody></table><table class="c3p6-tbl"><caption>三、空性拔根方法論與漏盡境界（中觀收束）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>伏與斷之別</td><td>伏（禪定力壓制，如石壓草，石搬開草復生）對斷（智慧力拔根，如斬樹根，永不復生）</td></tr><tr><td>空性堵漏</td><td>因緣生故無自性，無我可漏，漏源自斷；照見五蘊皆空，執著無處著力，漏自然不生</td></tr><tr><td>離四句辯證</td><td>有漏非實有（因緣生故）、無漏非全無（受苦果故）、亦有亦無邏輯相違、非有非無是戲論</td></tr><tr><td>漏盡身動力學</td><td>作用（感官心理活動）仍在，黏著已無——如荷葉水滴，滾動反光而片刻滑落無痕</td></tr><tr><td>寂靜清涼</td><td>不憂過去、不欣未來、於現在法不起染著——三時皆不生漏，是名寂靜是名清涼是名漏盡</td></tr></tbody></table><p class="c3p6-note">「諸漏已盡」四字，論主以十四字釋文層層窮舉——「諸」定全稱、「漏」定本體、「三界」定場所、「三種」定類型、「無餘」定斷盡度，構成一個邏輯上完整的解脫定義。中觀對此的獨特貢獻，在於指出漏之所以能被「斷」而非僅「伏」，正因漏是因緣所生、無自性可得——不是用意志力去對抗一個實有的敵人，而是照見敵人本自如幻。漏盡者非心死，而是作用仍在、黏著已無，如鳥飛空、如荷葉水滴，三時皆不生漏，即是寂靜清涼的真實義。</p></div></div>
+<script id="wy-c3p6-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c3p6Btn"),BOX=document.getElementById("c3p6Box"),MODAL=document.getElementById("c3p6Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=5;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#vidFab,.vid-fab,#videoFab,#wyVideoBtn,#wyFab,#wy-fab,#vid-floating,#floatingYt,.video-fab,.wy-vbtn,.wy-video-fab,.floating-yt",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c3p6Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C3P6:END-->
 </body>
 </html>
